@@ -4,7 +4,7 @@ const monthNames = [
 ];
 
 function getNewMonthHtml(date) {
-    return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear">' + date.getFullYear() + '</span></li></ul></div>' +
+    return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear">' + '</span></li></ul></div>' +
     '<ul class="weekdays"><li>Mo</li><li>Tu</li><li>Mo</li><li>We</li><li>Fr</li><li>Sa</li><li>Su</li></ul><ul class="days">';
 }
 
@@ -18,6 +18,11 @@ function initCalendar() {
     let str = ""; // Final HTML
 
     while (date < current) {
+
+        // Print year every Jannyary
+        if (date.getMonth() == 0)
+            str += '<br>' + date.getFullYear() + '<br>';
+
         str += getNewMonthHtml(date);
 
         // Increase days
@@ -30,7 +35,7 @@ function initCalendar() {
 
         str += getEndMonthHtml();
     }
-    
+
     document.getElementById("calendar").innerHTML = str;
 }
 
