@@ -63,3 +63,11 @@ body {
     font-size: 12px;
     color: #777;
 }
+
+.EN {
+    border: 5px solid red;
+}
+
+.JP {
+    border: 5px solid cyan;
+}

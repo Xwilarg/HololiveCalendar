@@ -1,4 +1,4 @@
-let members = [
+const members = [
     // GENERATION 0 JP
     { name: "Tokino Sora", gen: 0, genID: "JP", debutDate: new Date("2017-09-07"), endDate: null,
     youtube: "https://www.youtube.com/channel/UCp6993wxpyDPHUpavwDFqgg", twitter: "https://twitter.com/tokino_sora",
