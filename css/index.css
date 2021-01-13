@@ -9,6 +9,7 @@ ul {
 }
 
 .month {
+    vertical-align: middle;
     padding: 0.3rem;
     background: #35ade1;
     text-align: center;
@@ -52,10 +53,17 @@ ul {
     font-size: 5rem;
     text-align: center;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 13px;
     color: #333;
 }
 /* END */
+
+/* DIV STYLE */
+/* BEGIN */
+div {
+}
+/* END */
+
 
 /* TEXT STYLE */
 /* BEGIN */
@@ -67,8 +75,9 @@ body {
     color: white;
     font-weight: bold;
     background-color: #333;
-    text-align: center;
     margin: 0;
+    text-align: center;
+
 }
 
 label {
@@ -98,6 +107,7 @@ footer {
     font-family: 'Verdana', 'sans-serif';
     width: 100%;
     padding: .7em;
+    text-align: center;
 }
 /* END */
 
