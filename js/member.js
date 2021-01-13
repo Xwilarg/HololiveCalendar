@@ -51,5 +51,22 @@ let members = [
     hololiveEN: "https://en.hololive.tv/portfolio/items/433552", hololiveJP: "https://www.hololive.tv/portfolio/items/336386" },
     { lastName: "Oozora Subaru", gen: 2, genID: "JP", debutDate: new Date("2018-09-16"), endDate: null,
     youtube: "https://www.youtube.com/channel/UCvzGlP9oQwU--Y0r9id_jnA", twitter: "https://twitter.com/oozorasubaru",
-    hololiveEN: "https://en.hololive.tv/portfolio/items/433593", hololiveJP: "https://www.hololive.tv/portfolio/items/336385" }
+    hololiveEN: "https://en.hololive.tv/portfolio/items/433593", hololiveJP: "https://www.hololive.tv/portfolio/items/336385" },
+
+    // GENERATION 1 EN
+    { lastName: "Mori Calliope", gen: 1, genID: "EN", debutDate: new Date("2020-09-12"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCL_qhgtOy0dy1Agp8vkySQg", twitter: "https://twitter.com/moricalliope",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/584527", hololiveJP: "https://www.hololive.tv/portfolio/items/584535" },
+    { lastName: "Takanashi Kiara", gen: 1, genID: "EN", debutDate: new Date("2020-09-12"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCHsx4Hqa-1ORjQTh9TYDhww", twitter: "https://twitter.com/takanashikiara",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/584528", hololiveJP: "https://www.hololive.tv/portfolio/items/584540" },
+    { lastName: "Ninomae Ina'nis", gen: 1, genID: "EN", debutDate: new Date("2020-09-13"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCMwGHR0BTZuLsmjY_NT5Pwg", twitter: "https://twitter.com/ninomaeinanis",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/584532", hololiveJP: "https://www.hololive.tv/portfolio/items/584542" },
+    { lastName: "Gawr Gura", gen: 1, genID: "EN", debutDate: new Date("2020-09-13"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCoSrY_IQQVpmIRZ9Xf-y93g", twitter: "https://twitter.com/gawrgura",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/584533", hololiveJP: "https://www.hololive.tv/portfolio/items/584544" },
+    { lastName: "Watson Amelia", gen: 1, genID: "EN", debutDate: new Date("2020-09-13"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg", twitter: "https://twitter.com/watsonameliaEN",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/584534", hololiveJP: "https://www.hololive.tv/portfolio/items/584546" }
 ]
