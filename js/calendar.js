@@ -5,7 +5,7 @@ const monthNames = [
 
 function getNewMonthHtml(date) {
     return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear">' + date.getFullYear() + '</span></li></ul></div>' +
-    '<ul class="weekdays"><li>Mo</li><li>Tu</li><li>Mo</li><li>We</li><li>Fr</li><li>Sa</li><li>Su</li></ul><ul class="days">';
+    '<ul class="weekdays"><li>Su</li><li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li></ul><ul class="days">';
 }
 
 function getEndMonthHtml() {
@@ -19,6 +19,11 @@ function initCalendar() {
 
     while (date < current) {
         str += getNewMonthHtml(date);
+
+        // Set first day of the month
+        for (let i = 0; i < date.getDay(); i++) {
+            str += '<li></li>';
+        }
 
         // Increase days
         let currentMonth = date.getMonth();
