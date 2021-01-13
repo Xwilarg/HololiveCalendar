@@ -4,12 +4,12 @@ const monthNames = [
 ];
 
 function getNewMonthHtml(date) {
-    return '<div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear">' + date.getFullYear() + '</span></li></ul></div>' +
+    return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear">' + date.getFullYear() + '</span></li></ul></div>' +
     '<ul class="weekdays"><li>Mo</li><li>Tu</li><li>Mo</li><li>We</li><li>Fr</li><li>Sa</li><li>Su</li></ul><ul class="days">';
 }
 
 function getEndMonthHtml() {
-    return '</ul></div>';
+    return '</ul></div></div>';
 }
 
 function initCalendar() {

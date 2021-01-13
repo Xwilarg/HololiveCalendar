@@ -15,6 +15,10 @@ body {
     font-family: Verdana, sans-serif;
 }
 
+.monthContainer {
+    display: inline-block;
+}
+
 .month {
   padding: 1.5em;
   background: #6874e2; /* TODO: Change colors for Hololive theme */
