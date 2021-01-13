@@ -43,7 +43,6 @@ ul {
     background: #eee;
     margin: 0;
     height: 10em;
-    margin-top: 0;
 }
 
 .days li {
@@ -61,7 +60,6 @@ ul {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    font-weight: 400;
     line-height: 1.5;
     color: white;
     font-weight: bold;
