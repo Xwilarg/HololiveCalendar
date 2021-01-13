@@ -24,8 +24,8 @@ function initCalendar() {
     while (date < current) {
 
         // Print year every Jannyary
-        if (date.getMonth() == 0)
-            str += '<br><h1>' + date.getFullYear() + '</h1><br>';
+        if (date.getMonth() === 0)
+            str += '<h1>' + date.getFullYear() + '</h1>';
 
         str += getNewMonthHtml(date);
 
