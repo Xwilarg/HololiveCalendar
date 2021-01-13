@@ -1,4 +1,4 @@
-let members = [
+const members = [
     // GENERATION 0 JP
     { name: "Tokino Sora", gen: 0, genID: "JP", debutDate: new Date("2017-09-07"), endDate: null,
     youtube: "https://www.youtube.com/channel/UCp6993wxpyDPHUpavwDFqgg", twitter: "https://twitter.com/tokino_sora",
@@ -35,7 +35,7 @@ let members = [
     { lastName: "Hitomi Chris", gen: 1, genID: "JP", debutDate: new Date("2018-06-03"), endDate: new Date("2018-06-25"),
     youtube: null, twitter: "https://twitter.com/hitomikurisu",
     hololiveEN: null, hololiveJP: null },
-    
+
     // GENERATION 2 JP
     { lastName: "Minato Aqua", gen: 2, genID: "JP", debutDate: new Date("2018-08-08"), endDate: null,
     youtube: "https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg", twitter: "https://twitter.com/minatoaqua",

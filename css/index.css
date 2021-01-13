@@ -100,3 +100,14 @@ footer {
     padding: .7em;
 }
 /* END */
+
+/** CALENDAR BORDER **/
+/* English generation */
+.EN {
+    border: 5px solid red;
+}
+
+/* Japanese generation */
+.JP {
+    border: 5px solid cyan;
+}

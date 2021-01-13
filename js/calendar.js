@@ -12,6 +12,10 @@ function getEndMonthHtml() {
     return '</ul></div></div>';
 }
 
+function compareDates(date1, date2) {
+    return date1.getDate() === date2.getDate() && date1.getMonth() === date2.getMonth() && date1.getFullYear() === date2.getFullYear();
+}
+
 function initCalendar() {
     let date = new Date("2017-01-01");
     let current = new Date(); // Today
@@ -27,9 +31,13 @@ function initCalendar() {
 
         // Increase days
         let currentMonth = date.getMonth();
-        let i = 0;
         do {
-            str += '<li>' + (date.getDate()) + '</li>';
+            let currMembers = members.find((e) => compareDates(e.debutDate, date));
+            let className = "";
+            if (currMembers !== undefined) {
+                className = currMembers.genID;
+            }
+            str += '<li class="' + className + '">' + (date.getDate()) + '</li>';
             date.setDate(date.getDate() + 1);
         } while (date.getMonth() === currentMonth);
 
