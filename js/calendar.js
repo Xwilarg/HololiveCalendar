@@ -46,6 +46,10 @@ function initCalendar() {
             date.setDate(date.getDate() + 1);
         } while (date.getMonth() === currentMonth);
 
+        for (let i = date.getDay(); i < 7; i++) {
+            str += '<li></li>';
+        }
+
         str += getEndMonthHtml();
     }
 
