@@ -77,6 +77,12 @@ a {
     color: white;
     text-decoration: none;
 }
+
+h1 {
+    font-size: 3rem;
+    color: #35ade1;
+    font-weight: bold;
+}
 /* END */
 
 /* FOOTER STYLE */
