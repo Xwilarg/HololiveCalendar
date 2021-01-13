@@ -9,7 +9,7 @@ ul {
 }
 
 .month {
-    padding: 1.5em;
+    padding: 0.3rem;
     background: #35ade1;
     text-align: center;
 }
@@ -23,6 +23,7 @@ ul {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    margin-left: -2.3rem;
 }
 
 .weekdays {
