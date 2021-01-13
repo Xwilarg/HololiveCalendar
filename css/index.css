@@ -58,13 +58,6 @@ ul {
 }
 /* END */
 
-/* DIV STYLE */
-/* BEGIN */
-div {
-}
-/* END */
-
-
 /* TEXT STYLE */
 /* BEGIN */
 body {
@@ -106,7 +99,7 @@ footer {
     background-color: #33729d;
     font-family: 'Verdana', 'sans-serif';
     width: 100%;
-    padding: .7em;
+    padding: 0.3em;
     text-align: center;
 }
 /* END */
