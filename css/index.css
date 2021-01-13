@@ -9,10 +9,8 @@ ul {
 }
 
 .month {
-    vertical-align: middle;
     padding: 0.3rem;
     background: #35ade1;
-    text-align: center;
 }
 
 .headerYear {
@@ -38,20 +36,20 @@ ul {
     font-size: 1.1rem;
     width: 13.6%;
     color: #333;
-    text-align: center;
 }
 
 .days {
     padding: 10px 0;
     background: #eee;
     margin: 0;
+    height: 10em;
+    margin-top: 0;
 }
 
 .days li {
     display: inline-block;
     width: 13.6%;
     font-size: 5rem;
-    text-align: center;
     margin-bottom: 5px;
     font-size: 13px;
     color: #333;
@@ -77,7 +75,6 @@ body {
     background-color: #333;
     margin: 0;
     text-align: center;
-
 }
 
 label {
