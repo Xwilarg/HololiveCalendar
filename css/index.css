@@ -11,7 +11,7 @@ ul {
 }
 
 .month {
-    padding: 0.3rem;
+    padding: 0.1rem;
     background: #35ade1;
 }
 
@@ -21,7 +21,7 @@ ul {
 
 .month ul li {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-left: -2.3rem;
@@ -29,13 +29,13 @@ ul {
 
 .weekdays {
     margin: 0;
-    padding: 10px 0;
+    padding: 7px 0;
     background-color:#ddd;
 }
 
 .weekdays li {
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 12px;
     width: 13.6%;
     color: #333;
 }
@@ -44,7 +44,7 @@ ul {
     padding: 10px 0;
     background: #eee;
     margin: 0;
-    height: 10em;
+    height: 9em;
 }
 
 .days li {
@@ -75,7 +75,7 @@ a {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #35ade1;
     font-weight: bold;
 }
