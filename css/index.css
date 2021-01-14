@@ -6,13 +6,13 @@ ul {
 
 .monthContainer {
     display: inline-block;
+    vertical-align: top;
+    width: 12em;
 }
 
 .month {
-    vertical-align: middle;
-    padding: 0.3rem;
+    padding: 0.1rem;
     background: #35ade1;
-    text-align: center;
 }
 
 .headerYear {
@@ -21,7 +21,7 @@ ul {
 
 .month ul li {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-left: -2.3rem;
@@ -29,60 +29,44 @@ ul {
 
 .weekdays {
     margin: 0;
-    padding: 10px 0;
+    padding: 7px 0;
     background-color:#ddd;
 }
 
 .weekdays li {
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 12px;
     width: 13.6%;
     color: #333;
-    text-align: center;
 }
 
 .days {
     padding: 10px 0;
     background: #eee;
     margin: 0;
+    height: 9.5em;
 }
 
 .days li {
     display: inline-block;
     width: 13.6%;
-    font-size: 5rem;
-    text-align: center;
-    margin-bottom: 5px;
     font-size: 13px;
     color: #333;
+    padding-top: .3vw;
+    padding-bottom: .3vw;
 }
 /* END */
-
-/* DIV STYLE */
-/* BEGIN */
-div {
-}
-/* END */
-
 
 /* TEXT STYLE */
 /* BEGIN */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.5;
     color: white;
     font-weight: bold;
     background-color: #333;
     margin: 0;
     text-align: center;
-
-}
-
-label {
-    font-size: 1.5rem;
-    color: #676767;
 }
 
 a {
@@ -91,7 +75,7 @@ a {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #35ade1;
     font-weight: bold;
 }
@@ -106,34 +90,50 @@ footer {
     background-color: #33729d;
     font-family: 'Verdana', 'sans-serif';
     width: 100%;
-    padding: .7em;
+    padding: 0.2em;
     text-align: center;
+    font-size: 1rem;
+}
+
+footer > a {
+    border-bottom: 2px dashed #35ade1;
+}
+
+footer > a:hover {
+    border-bottom: 2px dashed red;
 }
 /* END */
 
 /** CALENDAR BORDER **/
 /* English generation */
+.days .selected {
+    width: calc(13.6% - 10px);
+}
+
+.selected {
+    border: 5px solid;
+}
+
 .EN, .GAMERS {
-    border: 5px solid red;
+    border-color: red;
 }
 
 /* Japanese generation */
 .JP {
-    border: 5px solid cyan;
+    border-color: cyan;
 }
 
 /* Indonesian generation */
 .ID {
-    border: 5px solid grey;
+    border-color: grey;
 }
 
 /* Chinese generation */
 .CN {
-    border: 5px solid orange;
+    border-color:orange;
 }
-
 
 /* Holostars */
 .HOLOSTARS {
-    border: 5px solid green;
+    border-color: green;
 }
