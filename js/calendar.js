@@ -4,7 +4,7 @@ const monthNames = [
 ];
 
 function getNewMonthHtml(date) {
-    return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear">' + '</span></li></ul></div>' +
+    return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear"></span></li></ul></div>' +
     '<ul class="weekdays"><li>Su</li><li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li></ul><ul class="days">';
 }
 
