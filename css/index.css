@@ -113,11 +113,27 @@ footer {
 
 /** CALENDAR BORDER **/
 /* English generation */
-.EN {
+.EN, .GAMERS {
     border: 5px solid red;
 }
 
 /* Japanese generation */
 .JP {
     border: 5px solid cyan;
+}
+
+/* Indonesian generation */
+.ID {
+    border: 5px solid grey;
+}
+
+/* Chinese generation */
+.CN {
+    border: 5px solid orange;
+}
+
+
+/* Holostars */
+.HOLOSTARS {
+    border: 5px solid green;
 }
