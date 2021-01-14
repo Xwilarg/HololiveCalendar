@@ -42,7 +42,7 @@ function initCalendar() {
             if (currMembers !== undefined) {
                 className = "selected " + currMembers.genID[0];
             }
-            str += '<li class="' + className + '">' + (date.getDate()) + '</li>';
+            str += '<li class="data ' + className + '">' + (date.getDate()) + '</li>';
             date.setDate(date.getDate() + 1);
         } while (date.getMonth() === currentMonth);
 
