@@ -55,6 +55,10 @@ ul {
     padding-top: .3vw;
     padding-bottom: .3vw;
 }
+
+.days li:hover {
+    background-color: #bbb;
+}
 /* END */
 
 /* TEXT STYLE */
