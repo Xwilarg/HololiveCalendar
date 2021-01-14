@@ -50,9 +50,10 @@ ul {
 .days li {
     display: inline-block;
     width: 13.6%;
-    margin-bottom: 5px;
     font-size: 13px;
     color: #333;
+    padding-top: .3vw;
+    padding-bottom: .3vw;
 }
 /* END */
 
@@ -61,7 +62,6 @@ ul {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    line-height: 1.5;
     color: white;
     font-weight: bold;
     background-color: #333;
@@ -106,11 +106,19 @@ footer > a:hover {
 
 /** CALENDAR BORDER **/
 /* English generation */
+.days .selected {
+    width: calc(13.6% - 10px);
+}
+
+.selected {
+    border: 5px solid;
+}
+
 .EN {
-    border: 5px solid red;
+    border-color: red;
 }
 
 /* Japanese generation */
 .JP {
-    border: 5px solid cyan;
+    border-color: cyan;
 }

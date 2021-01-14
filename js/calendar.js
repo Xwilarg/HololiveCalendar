@@ -30,8 +30,8 @@ function initCalendar() {
         str += getNewMonthHtml(date);
 
         // Set first day of the month
-        for (let i = 0; i < date.getDay(); i++) {
-            str += '<li></li>';
+        for (let i = 0; i <= date.getDay(); i++) {
+            str += '<li>&nbsp;</li>';
         }
 
         // Increase days
@@ -40,14 +40,14 @@ function initCalendar() {
             let currMembers = members.find((e) => compareDates(e.debutDate, date));
             let className = "";
             if (currMembers !== undefined) {
-                className = currMembers.genID;
+                className = "selected " + currMembers.genID;
             }
             str += '<li class="' + className + '">' + (date.getDate()) + '</li>';
             date.setDate(date.getDate() + 1);
         } while (date.getMonth() === currentMonth);
 
         for (let i = date.getDay(); i < 7; i++) {
-            str += '<li></li>';
+            str += '<li>&nbsp;</li>';
         }
 
         str += getEndMonthHtml();
