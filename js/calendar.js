@@ -17,7 +17,7 @@ function compareDates(date1, date2) {
 }
 
 function initCalendar() {
-    let date = new Date("2017-01-01");
+    let date = new Date(Date.UTC(2017, 0, 1));
     let current = new Date(); // Today
     let str = ""; // Final HTML
 
