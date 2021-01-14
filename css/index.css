@@ -114,12 +114,12 @@ footer > a:hover {
     border: 5px solid;
 }
 
-.EN, .GAMERS {
+.EN {
     border-color: red;
 }
 
 /* Japanese generation */
-.JP {
+.JP, .GAMERS {
     border-color: cyan;
 }
 
