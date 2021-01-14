@@ -119,6 +119,28 @@ const members = [
     // INNK MUSIC
     // AZKi already listed in gen 0
 
+    // GENERATION 1 ID
+    { lastName: "Ayunda Risu", genID: [ "ID" ], debutDate: new Date("2020-04-10"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCOyYb1c43VlX9rc_lT6NKQw", twitter: "https://twitter.com/ayunda_risu",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/438283", hololiveJP: "https://www.hololive.tv/portfolio/items/440312" },
+    { lastName: "Moona Hoshinova", genID: [ "ID" ], debutDate: new Date("2020-04-11"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCP0BspO_AMEe3aQqqpo89Dg", twitter: "https://twitter.com/moonahoshinova",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/438286", hololiveJP: "https://www.hololive.tv/portfolio/items/440320" },
+    { lastName: "Airani Iofifteen", genID: [ "ID" ], debutDate: new Date("2020-04-12"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCAoy6rzhSf4ydcYjJw3WoVg", twitter: "https://twitter.com/airaniiofifteen",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/438288", hololiveJP: "https://www.hololive.tv/portfolio/items/440326" },
+
+    // GENERATION 2 ID
+    { lastName: "Kureiji Ollie", genID: [ "ID" ], debutDate: new Date("2020-12-04"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UCYz_5n-uDuChHtLo7My1HnQ", twitter: "https://twitter.com/kureijiollie",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/684687", hololiveJP: "https://www.hololive.tv/portfolio/items/684664" },
+    { lastName: "Anya Melfissa", genID: [ "ID" ], debutDate: new Date("2020-12-05"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UC727SQYUvx5pDDGQpTICNWg", twitter: "https://twitter.com/anyamelfissa",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/684688", hololiveJP: "https://www.hololive.tv/portfolio/items/684665" },
+    { lastName: "Pavolia Reine", genID: [ "ID" ], debutDate: new Date("2020-12-06"), endDate: null,
+    youtube: "https://www.youtube.com/channel/UChgTyjG-pdNvxxhdsXfHQ5Q", twitter: "https://twitter.com/pavoliareine",
+    hololiveEN: "https://en.hololive.tv/portfolio/items/684689", hololiveJP: "https://www.hololive.tv/portfolio/items/684666" },
+
     // GENERATION 1 EN
     { lastName: "Mori Calliope", genID: [ "EN" ], debutDate: new Date("2020-09-12"), endDate: null,
     youtube: "https://www.youtube.com/channel/UCL_qhgtOy0dy1Agp8vkySQg", twitter: "https://twitter.com/moricalliope",

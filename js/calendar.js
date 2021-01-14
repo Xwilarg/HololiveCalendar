@@ -40,7 +40,7 @@ function initCalendar() {
             let currMembers = members.find((e) => compareDates(e.debutDate, date));
             let className = "";
             if (currMembers !== undefined) {
-                className = currMembers.genID;
+                className = currMembers.genID[0];
             }
             str += '<li class="' + className + '">' + (date.getDate()) + '</li>';
             date.setDate(date.getDate() + 1);
