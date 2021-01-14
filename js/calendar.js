@@ -30,8 +30,10 @@ function initCalendar() {
         str += getNewMonthHtml(date);
 
         // Set first day of the month
-        for (let i = 0; i <= date.getDay(); i++) {
-            str += '<li>&nbsp;</li>';
+        if (date.getDay() !== 6) {
+            for (let i = 0; i <= date.getDay(); i++) {
+                str += '<li>&nbsp;</li>';
+            }
         }
 
         // Increase days
