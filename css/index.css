@@ -106,6 +106,16 @@ footer > a {
 footer > a:hover {
     border-bottom: 2px dashed red;
 }
+
+footer > button {
+    position: absolute;
+    right: .6em;
+    bottom: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px white solid;
+    color: white;
+}
 /* END */
 
 /** CALENDAR BORDER **/
