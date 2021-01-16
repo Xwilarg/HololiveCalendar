@@ -165,7 +165,7 @@ const members = [
     { name: "Civia", genID: [ "CN" ], debutDate: new Date("2019-11-01"), graduation: new Date("2020-12-18"),
     youtube: null, twitter: "https://twitter.com/_Civia",
     hololiveEN: null, hololiveJP: null },
-    { name: "Space Echo", genID: [ "CN" ], debutDate: new Date("2020-01-30"), graduation: new Date("2020-12-21"),
+    { name: "Spade Echo", genID: [ "CN" ], debutDate: new Date("2020-01-30"), graduation: new Date("2020-12-21"),
     youtube: null, twitter: "https://twitter.com/SpadeEcho",
     hololiveEN: null, hololiveJP: null },
 
@@ -196,7 +196,7 @@ const members = [
     { name: "Kagami Kira", genID: [ "HOLOSTARS" ], debutDate: new Date("2019-06-09"), graduation: new Date("2020-11-30"),
     youtube: "https://www.youtube.com/channel/UCEzsociuFqVwgZuMaZqaCsg", twitter: "https://twitter.com/kagamikirach",
     hololiveEN: null, hololiveJP: null },
-    { name: "Yakushiji Sazaku", genID: [ "HOLOSTARS" ], debutDate: new Date("2019-09-07"), graduation: undefined,
+    { name: "Yakushiji Suzaku", genID: [ "HOLOSTARS" ], debutDate: new Date("2019-09-07"), graduation: undefined,
     youtube: null, twitter: "https://twitter.com/YakushijiSuzaku",
     hololiveEN: null, hololiveJP: null },
 

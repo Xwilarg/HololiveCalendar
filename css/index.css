@@ -123,8 +123,11 @@ footer > button {
     border: 5px solid;
     background-color: white;
     color: black;
-    width: 100px;
-    height: 100px;
+}
+
+#tooltip > img {
+    top: 5px;
+    margin-bottom: -6px;
 }
 /* END */
 

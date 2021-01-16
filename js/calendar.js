@@ -25,10 +25,19 @@ document.body.addEventListener('click', function (e) {
     }
 }, true);
 
-function setPopup(elemId, className) {
+function setPopup(elemId, className, date) {
     let tooltip = document.getElementById('tooltip');
     let elem = document.getElementById(elemId);
-    tooltip.classList = [ className ];
+    tooltip.classList = [ className ]; // Color outline depending of generation
+
+    // Put images in the popup
+    let currDate = new Date(date);
+    let str = "";
+    members.filter(e => compareDates(e.debutDate, currDate)).forEach(function(x) {
+        str += '<img src="' + window.location.origin + '/img/' + x.name + '.png"/>';
+    })
+    tooltip.innerHTML = str;
+
     currentPopup = Popper.createPopper(elem, tooltip, {
         placement: 'right',
     });
@@ -57,16 +66,16 @@ function initCalendar() {
         // Increase days
         let currentMonth = date.getMonth();
         do {
-            let currMembers = members.find((e) => compareDates(e.debutDate, date));
+            let currMembers = members.filter(e => compareDates(e.debutDate, date));
             let className = "";
             let genName = "";
             let onClick = "";
             let elemId = "";
-            if (currMembers !== undefined) {
-                genName = currMembers.genID[0];
+            if (currMembers.length > 0) {
+                genName = currMembers[0].genID[0];
                 className = "selected " + genName;
                 elemId = "x" + date.getFullYear() + "x"+  date.getMonth() + "x" + date.getDate();
-                onClick = "setPopup(\'" + elemId + "\', \'" + genName + "\')";
+                onClick = "setPopup(\'" + elemId + "\', \'" + genName + "\', \'" + date + "\')";
             }
             str += '<li class="data ' + className + '" id="' + elemId + '" onclick="' + onClick + '">'
             + (date.getDate()) + '</li>';
