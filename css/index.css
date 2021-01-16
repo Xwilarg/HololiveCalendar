@@ -118,6 +118,16 @@ footer > button {
 }
 /* END */
 
+/** TOOLTIP **/
+#tooltip {
+    border: 5px solid;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 100px;
+}
+/* END */
+
 /** CALENDAR BORDER **/
 /* English generation */
 .days .selected {
@@ -129,25 +139,26 @@ footer > button {
 }
 
 .EN {
-    border-color: red;
+    border-color: red !important;
 }
 
 /* Japanese generation */
 .JP, .GAMERS {
-    border-color: cyan;
+    border-color: cyan !important;
 }
 
 /* Indonesian generation */
 .ID {
-    border-color: grey;
+    border-color: grey !important;
 }
 
 /* Chinese generation */
 .CN {
-    border-color:orange;
+    border-color:orange !important;
 }
 
 /* Holostars */
 .HOLOSTARS {
-    border-color: green;
+    border-color: green !important;
 }
+/* END */
