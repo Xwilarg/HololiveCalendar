@@ -3,6 +3,8 @@ const monthNames = [
     "July", "August", "September", "October", "November", "December"
 ];
 
+let currentPopup = null;
+
 function getNewMonthHtml(date) {
     return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear"></span></li></ul></div>' +
     '<ul class="weekdays"><li>Su</li><li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li></ul><ul class="days">';
@@ -16,11 +18,18 @@ function compareDates(date1, date2) {
     return date1.getDate() === date2.getDate() && date1.getMonth() === date2.getMonth() && date1.getFullYear() === date2.getFullYear();
 }
 
+document.body.addEventListener('click', function (e) {
+    if (currentPopup !== null) {
+        currentPopup.destroy();
+        currentPopup = null;
+    }
+}, true);
+
 function setPopup(elemId, className) {
     let tooltip = document.getElementById('tooltip');
     let elem = document.getElementById(elemId);
     tooltip.classList = [ className ];
-    Popper.createPopper(elem, tooltip, {
+    currentPopup = Popper.createPopper(elem, tooltip, {
         placement: 'right',
     });
 }
