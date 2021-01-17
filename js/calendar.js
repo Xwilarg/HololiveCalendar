@@ -27,13 +27,12 @@ function setPopupClick(elemId, className, date) {
 function setPopup(elemId, className, date) {
     let tooltip = document.getElementById('tooltip');
     let elem = document.getElementById(elemId);
-    tooltip.classList = [ className ]; // Color outline depending of generation
 
     // Put images in the popup
     let currDate = new Date(date);
     let str = "";
     members.filter(e => compareDates(e.debutDate, currDate)).forEach(function(x) {
-        str += '<img src="' + window.location.origin + '/img/' + x.name + '.png"/>';
+        str += '<img class="' + className + '" src="' + window.location.origin + '/img/' + x.name + '.png"/>';
     })
     tooltip.innerHTML = str;
 

@@ -120,7 +120,6 @@ footer > button {
 
 /** TOOLTIP **/
 #tooltip {
-    border: 5px solid;
     background-color: white;
     color: black;
 }
@@ -128,6 +127,7 @@ footer > button {
 #tooltip > img {
     top: 5px;
     margin-bottom: -6px;
+    border: 5px solid;
 }
 /* END */
 
