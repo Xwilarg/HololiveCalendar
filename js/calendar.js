@@ -121,8 +121,18 @@ function getBestPosition(id) {
     let distUp = position.y;
     let distDown = document.body.scrollHeight - position.y;
 
+    let idSplit = id.split('x');
+    let currYear = idSplit[1];
+    let currMonth = parseInt(idSplit[2]);
+
     allIds.forEach(function (e) {
-        if (id === e || !id.startsWith(e.substring(0, 5))) {
+        if (id === e) {
+            return;
+        }
+
+        // We only take info from the adjacent months
+        let otherSplit = e.split('x');
+        if (otherSplit[1] !== currYear || Math.abs(otherSplit[2] - parseInt(currMonth)) > 1) {
             return;
         }
 
