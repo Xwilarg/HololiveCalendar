@@ -37,8 +37,9 @@ function setPopup(elemId, className, date) {
     })
     tooltip.innerHTML = str;
 
+    let pos = elem.getBoundingClientRect();
     currentPopup = Popper.createPopper(elem, tooltip, {
-        placement: 'right',
+        placement: pos.x < window.innerWidth / 2 ? 'right' : 'left',
     });
 }
 
