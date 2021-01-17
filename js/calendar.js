@@ -164,15 +164,37 @@ function getBestPosition(id) {
         }
     });
 
+    let result = "";
     if (distLeft > distRight && distLeft > distUp && distLeft > distDown) {
-        return "left";
+        result = "left";
+        if (distUp > distDown) {
+            result += "-start";
+        } else if (distUp < distDown) {
+            result += "-end";
+        }
     } else if (distRight > distUp && distRight > distDown) {
-        return "right";
+        result = "right";
+        if (distUp > distDown) {
+            result += "-start";
+        } else if (distUp < distDown) {
+            result += "-end";
+        }
     } else if (distUp > distDown) {
-        return "top";
+        result = "top";
+        if (distLeft > distRight) {
+            result += "-start";
+        } else if (distLeft < distRight) {
+            result += "-end";
+        }
     } else {
-        return "bottom";
+        result = "bottom";
+        if (distLeft > distRight) {
+            result += "-start";
+        } else if (distLeft < distRight) {
+            result += "-end";
+        }
     }
+    return result;
 }
 
 initCalendar();
