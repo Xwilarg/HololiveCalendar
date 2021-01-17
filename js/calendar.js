@@ -113,13 +113,19 @@ function initCalendar() {
     });
 }
 
+// Used by getBestPosition, if we are too close to the border, we must not put the popup in this direction
+function remIfTooClose(distance) {
+    if (distance > 200) return distance;
+    return 0;
+}
+
 // Return the position with the most free space depending of the adjacent dates
 function getBestPosition(id) {
     let position = document.getElementById(id).getBoundingClientRect();
-    let distLeft = position.x;
-    let distRight = document.body.scrollWidth - position.x;
-    let distUp = position.y;
-    let distDown = document.body.scrollHeight - position.y;
+    let distLeft = remIfTooClose(position.x);
+    let distRight = remIfTooClose(document.body.scrollWidth - position.x);
+    let distUp = remIfTooClose(position.y);
+    let distDown = remIfTooClose(document.body.scrollHeight - position.y);
 
     let idSplit = id.split('x');
     let currYear = idSplit[1];
