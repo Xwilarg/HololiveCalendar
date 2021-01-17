@@ -5,6 +5,8 @@ const monthNames = [
 
 let currentPopup = null;
 let wasDateClicked = false; // Was date overred (false) or clicked (true)
+let datePositions = {}; // Position of dates depending of the adjacent ones
+let allIds = []; // All dates with a character on them
 
 function getNewMonthHtml(date) {
     return '<div class="monthContainer"><div class="month"><ul><li>' + monthNames[date.getMonth()] + '<br><span class="headerYear"></span></li></ul></div>' +
@@ -36,9 +38,8 @@ function setPopup(elemId, className, date) {
     })
     tooltip.innerHTML = str;
 
-    let pos = elem.getBoundingClientRect();
     currentPopup = Popper.createPopper(elem, tooltip, {
-        placement: pos.x < window.innerWidth / 2 ? 'right' : 'left',
+        placement: datePositions[elemId]
     });
 }
 
@@ -73,7 +74,7 @@ function initCalendar() {
 
         // Set first day of the month
         if (date.getDay() !== 6) {
-            for (let i = 0; i <= date.getDay(); i++) {
+            for (let i = 0; i < date.getDay(); i++) {
                 str += '<li>&nbsp;</li>';
             }
         }
@@ -90,6 +91,7 @@ function initCalendar() {
                 let onHover = "setPopup(\'" + elemId + "\', \'" + genName + "\', \'" + date + "\')";
                 str += '<li class="data ' + className + '" id="' + elemId + '" onclick="' + onClick + '" onmouseover="' + onHover + '" onmouseleave="leavePopup()">'
                 + (date.getDate()) + '</li>';
+                allIds.push(elemId);
             }
             else {
                 str += '<li class="data">' + (date.getDate()) + '</li>';
@@ -105,6 +107,53 @@ function initCalendar() {
     }
 
     document.getElementById("calendar").innerHTML = str;
+
+    allIds.forEach(function (e) {
+        datePositions[e] = getBestPosition(e);
+    });
+}
+
+// Return the position with the most free space depending of the adjacent dates
+function getBestPosition(id) {
+    let position = document.getElementById(id).getBoundingClientRect();
+    let xPosPercent = position.x * 100 / document.body.scrollWidth;
+    let yPosPercent = position.y * 100 / document.body.scrollHeight;
+    let distLeft = xPosPercent;
+    let distRight = 100 - xPosPercent;
+    let distUp = yPosPercent;
+    let distDown = 100 - yPosPercent;
+
+    allIds.forEach(function (e) {
+        if (id === e) {
+            return;
+        }
+
+        let otherPos = document.getElementById(e).getBoundingClientRect();
+        let xDist = position.x - otherPos.x;
+        let yDist = position.y - otherPos.y;
+
+       /* if (id === "x2018x2x4" && yDist === -5.75) {
+            console.log(position.y + " " + otherPos.y);
+            console.log(e);
+        } */
+
+        if (xDist > 0 && xDist < distRight) distRight = xDist;
+        else if (xDist < 0 && (-xDist) < distLeft) distLeft = -xDist;
+        if (yDist > 0 && yDist < distDown) distDown = yDist;
+        else if (yDist < 0 && (-yDist) < distUp) distUp = -yDist;
+    });
+
+    console.log("Left: " + distLeft + " ; Right: " + distRight + " ; Up: " + distUp + " ; Down: " + distDown);
+
+    if (distLeft > distRight && distLeft > distUp && distLeft > distDown) {
+        return "left";
+    } else if (distRight > distUp && distRight > distDown) {
+        return "right";
+    } else if (distUp > distDown) {
+        return "top";
+    } else {
+        return "bottom";
+    }
 }
 
 initCalendar();

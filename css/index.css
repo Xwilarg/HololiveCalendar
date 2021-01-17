@@ -50,10 +50,10 @@ ul {
 .days li {
     display: inline-block;
     width: 13.6%;
+    padding-top: 0.68vw;
+    padding-bottom: 0.68vw;
     font-size: 13px;
     color: #333;
-    padding-top: .3vw;
-    padding-bottom: .3vw;
 }
 
 .days .data:hover {
@@ -135,6 +135,8 @@ footer > button {
 /* English generation */
 .days .selected {
     width: calc(13.6% - 10px);
+    padding-top: calc(0.68vw - 5px);
+    padding-bottom: calc(0.68vw - 5px);
 }
 
 .selected {
