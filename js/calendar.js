@@ -146,10 +146,22 @@ function getBestPosition(id) {
         let xDist = position.x - otherPos.x;
         let yDist = position.y - otherPos.y;
 
-        if (xDist > 0 && xDist < distLeft) distLeft = xDist;
-        else if (xDist < 0 && (-xDist) < distRight) distRight = -xDist;
-        if (yDist > 0 && yDist < distUp) distUp = yDist;
-        else if (yDist < 0 && (-yDist) < distDown) distDown = -yDist;
+        let dist = Math.sqrt(xDist * xDist + yDist * yDist);
+
+        if (yDist === 0) {
+            if (xDist > 0 && xDist < distLeft) distLeft = xDist;
+            else if (xDist < 0 && (-xDist) < distRight) distRight = -xDist;
+        } else {
+            if (xDist > 0 && dist < distLeft) distLeft = dist;
+            else if (xDist < 0 && dist < distRight) distRight = dist;
+        }
+        if (xDist === 0) {
+            if (yDist > 0 && yDist < distUp) distUp = yDist;
+            else if (yDist < 0 && (-yDist) < distDown) distDown = -yDist;
+        } else {
+            if (yDist > 0 && dist < distUp) distUp = dist;
+            else if (yDist < 0 && dist < distDown) distDown = dist;
+        }
     });
 
     if (distLeft > distRight && distLeft > distUp && distLeft > distDown) {
