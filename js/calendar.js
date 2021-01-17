@@ -168,30 +168,30 @@ function getBestPosition(id) {
     if (distLeft > distRight && distLeft > distUp && distLeft > distDown) {
         result = "left";
         if (distUp > distDown) {
-            result += "-start";
-        } else if (distUp < distDown) {
             result += "-end";
+        } else if (distUp < distDown) {
+            result += "-start";
         }
     } else if (distRight > distUp && distRight > distDown) {
         result = "right";
         if (distUp > distDown) {
-            result += "-start";
-        } else if (distUp < distDown) {
             result += "-end";
+        } else if (distUp < distDown) {
+            result += "-start";
         }
     } else if (distUp > distDown) {
         result = "top";
         if (distLeft > distRight) {
-            result += "-start";
-        } else if (distLeft < distRight) {
             result += "-end";
+        } else if (distLeft < distRight) {
+            result += "-start";
         }
     } else {
         result = "bottom";
         if (distLeft > distRight) {
-            result += "-start";
-        } else if (distLeft < distRight) {
             result += "-end";
+        } else if (distLeft < distRight) {
+            result += "-start";
         }
     }
     return result;
