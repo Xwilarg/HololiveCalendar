@@ -116,15 +116,13 @@ function initCalendar() {
 // Return the position with the most free space depending of the adjacent dates
 function getBestPosition(id) {
     let position = document.getElementById(id).getBoundingClientRect();
-    let xPosPercent = position.x * 100 / document.body.scrollWidth;
-    let yPosPercent = position.y * 100 / document.body.scrollHeight;
-    let distLeft = xPosPercent;
-    let distRight = 100 - xPosPercent;
-    let distUp = yPosPercent;
-    let distDown = 100 - yPosPercent;
+    let distLeft = position.x;
+    let distRight = document.body.scrollWidth - position.x;
+    let distUp = position.y;
+    let distDown = document.body.scrollHeight - position.y;
 
     allIds.forEach(function (e) {
-        if (id === e) {
+        if (id === e || !id.startsWith(e.substring(0, 5))) {
             return;
         }
 
@@ -132,18 +130,11 @@ function getBestPosition(id) {
         let xDist = position.x - otherPos.x;
         let yDist = position.y - otherPos.y;
 
-       /* if (id === "x2018x2x4" && yDist === -5.75) {
-            console.log(position.y + " " + otherPos.y);
-            console.log(e);
-        } */
-
-        if (xDist > 0 && xDist < distRight) distRight = xDist;
-        else if (xDist < 0 && (-xDist) < distLeft) distLeft = -xDist;
-        if (yDist > 0 && yDist < distDown) distDown = yDist;
-        else if (yDist < 0 && (-yDist) < distUp) distUp = -yDist;
+        if (xDist > 0 && xDist < distLeft) distLeft = xDist;
+        else if (xDist < 0 && (-xDist) < distRight) distRight = -xDist;
+        if (yDist > 0 && yDist < distUp) distUp = yDist;
+        else if (yDist < 0 && (-yDist) < distDown) distDown = -yDist;
     });
-
-    console.log("Left: " + distLeft + " ; Right: " + distRight + " ; Up: " + distUp + " ; Down: " + distDown);
 
     if (distLeft > distRight && distLeft > distUp && distLeft > distDown) {
         return "left";
