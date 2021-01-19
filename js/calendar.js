@@ -4,7 +4,6 @@ const monthNames = [
 ];
 
 let currentPopup = null;
-let wasDateClicked = false; // Was date overred (false) or clicked (true)
 let datePositions = {}; // Position of dates depending of the adjacent ones
 let allIds = []; // All dates with a character on them
 
@@ -19,11 +18,6 @@ function getEndMonthHtml() {
 
 function compareDates(date1, date2) {
     return date1.getDate() === date2.getDate() && date1.getMonth() === date2.getMonth() && date1.getFullYear() === date2.getFullYear();
-}
-
-function setPopupClick(elemId, className, date) {
-    wasDateClicked = true;
-    setPopup(elemId, className, date);
 }
 
 function setPopup(elemId, className, date) {
@@ -43,20 +37,11 @@ function setPopup(elemId, className, date) {
     });
 }
 
-function leavePopup() {
-    if (!wasDateClicked && currentPopup !== null) {
-        currentPopup.destroy();
-        currentPopup = null;
-        wasDateClicked = false;
-    }
-}
-
 document.body.addEventListener('click', function () {
     if (currentPopup !== null) {
         currentPopup.destroy();
         currentPopup = null;
     }
-    wasDateClicked = false;
 }, true);
 
 function initCalendar() {
@@ -87,9 +72,8 @@ function initCalendar() {
                 let genName = currMembers[0].genID[0];
                 let className = "selected " + genName;
                 let elemId = "x" + date.getFullYear() + "x"+  date.getMonth() + "x" + date.getDate();
-                let onClick = "setPopupClick(\'" + elemId + "\', \'" + genName + "\', \'" + date + "\')";
-                let onHover = "setPopup(\'" + elemId + "\', \'" + genName + "\', \'" + date + "\')";
-                str += '<li class="data ' + className + '" id="' + elemId + '" onclick="' + onClick + '" onmouseover="' + onHover + '" onmouseleave="leavePopup()">'
+                let onClick = "setPopup(\'" + elemId + "\', \'" + genName + "\', \'" + date + "\')";
+                str += '<li class="data ' + className + '" id="' + elemId + '" onclick="' + onClick + '" onmouseover="' + onClick + '">'
                 + (date.getDate()) + '</li>';
                 allIds.push(elemId);
             }
